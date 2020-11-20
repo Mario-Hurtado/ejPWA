@@ -47,8 +47,8 @@ const Marvel = () => {
         setPersonajes(localStorage.getItem("personajes"));
       }
     } else {
-      const params = { apikey: apikey, hash: md5(concatenacion), ts: ts };
-      /*fetch(
+      /*const params = { apikey: apikey, hash: md5(concatenacion), ts: ts };
+      fetch(
     `https://gateway.marvel.com:443/v1/public/characters?apikey=${encodeURIComponent(
       params.apikey
     )}&hash=${encodeURIComponent(params.hash)}&ts=${encodeURIComponent(
