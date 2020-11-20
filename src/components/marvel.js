@@ -30,7 +30,7 @@ const Marvel = () => {
   const classes = useStyles();
 
   useEffect(() => {
-    if (!navigator.online) {
+    if (!navigator.onLine) {
       if (localStorage.getItem("personajes") === null) {
         setPersonajes([
           {
