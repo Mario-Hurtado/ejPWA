@@ -44,7 +44,7 @@ const Marvel = () => {
           },
         ]);
       } else {
-        setPersonajes(localStorage.getItem("personajes"));
+        setPersonajes(JSON.parse(localStorage.getItem("personajes")));
       }
     } else {
       /*const params = { apikey: apikey, hash: md5(concatenacion), ts: ts };
@@ -65,7 +65,7 @@ const Marvel = () => {
         })
         .then((response) => {
           setPersonajes(response.data.data.results);
-          localStorage.setItem("personajes", response.data.data.results);
+          localStorage.setItem("personajes", JSON.stringify(response.data.data.results));
         });
     }
   }, []);
